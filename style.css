@@ -15,10 +15,9 @@ body {
     font-family: 'Poppins', 'Open Sans', sans-serif;
     min-height: 100vh;
     background-color: var(--clr-violet);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    background-image: url(./images/bg-mobile.svg);
+    background-repeat: no-repeat;
+   
 }  
 
 h1,
@@ -29,36 +28,47 @@ h2, h3{
     color: var(--clr-white);
     font-size: 30px;
     font-family: 'Open Sans';
-    text-align: center;
+    
 }
   
 p{
     line-height: 1.6;
     font-size: 14px;
-    text-align: center;
     margin-bottom: 1.5em;
 }
 
-main{
-    padding: 0 2em;
-    background: url(./images/bg-mobile.svg) no-repeat;
-}
 
-img{
+img,
+picture{
     max-width: 100%;
     display: block;
 }
 
-header{
-    
+ul{
+    list-style: none;
 }
 
+a{
+    cursor: pointer;
+}
+
+header{
+    padding: 2em 0 ;
+}
 .logo-img{
-    width: 30%;
+    width: 150px;
+}
+
+.container{
+    padding: 0 2em;
 }
 
 .mock-img{
     margin: 2em 0;
+}
+
+.content__body{
+    text-align: center;
 }
 
 .content p{
@@ -67,26 +77,71 @@ header{
 
 button{
     display: block;
-    width: 70%;
     border: none;
     border-radius: 50px;
     background-color: var(--clr-white);
     color: var(--clr-violet);
-    padding: 1em;
+    padding: 1em 3em;
     margin-inline: auto;
+    cursor: pointer;
 }
 
-footer{
+button:hover{
+    background-color: var(--clr-sfmagenta);
+    color: var(--clr-white);
+}
+
+.social-list{
     display: flex;
     gap: 1.5em;
     justify-content: center;
     align-items: center;
-    margin-top: 4em;
+}
+
+footer{
+    margin-top: 3em;
+}
+
+.social-list-item{
+    border: 1px solid var(--clr-white);
+    border-radius: 50%;
+    padding: 0.5em
 }
 
 .footer-img{
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--clr-white);
-    border-radius: 50%
+    width: 30px;
+    height: 30px;
+}
+
+@media (min-width: 565px){
+    body{
+        background-image: url(images/bg-desktop.svg);
+        background-position: center;
+    }
+
+    .content{
+        display: flex;
+        gap: 0.5em;
+    }
+    .content__body{
+        width: 40%;
+        padding-top: 5em;
+        text-align: left;
+    }
+    
+    .container{
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    .content__img{
+        width: 60%;
+    }
+
+    button{
+        margin-inline: 0 auto;
+    }
+
+    .social-list{
+        justify-content: right;
+    }
 }
